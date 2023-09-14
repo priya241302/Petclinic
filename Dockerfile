@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM tomcat:9-jre8
 EXPOSE 8082
-ADD target/petclinic.war petclinic.war
-ENTRYPOINT ["java","-jar","/petclinic.war"]
+ADD target/petclinic.war /usr/local/tomcat/webapps/
+CMD ["catalina.sh","run"]
