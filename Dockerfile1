@@ -1,0 +1,4 @@
+FROM tomcat:9-jre8
+COPY target/petclinic.war /usr/local/tomcat/webappps
+EXPOSE 8082
+CMD ["catalina.sh","run"]
